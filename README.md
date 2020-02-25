@@ -1,10 +1,13 @@
-# warihash_public_api
-this is a repository for WariHash's public API 
+# WariHash Public API 
+This is a repository for WariHash's public API. The API allows anyone to setup a form where users can purchase hashing power and direct them to the stratum server of their choosing. Mining pools for example, could use this API to allow their customers to purchase and augment their hashing power. 
 
+We provide direct API access, and also provide a library that can be integrated into websites that utilizes the API for easy integration. 
+
+# Authentication
+
+You will need to register an account with us, where you will be provided with an API token. 
 
 ## API's
-
-We'll implement app tokens for this...
 
 get_bids - retreive bids
 
