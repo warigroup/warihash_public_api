@@ -7,9 +7,43 @@ No authentiation is required to use the API.
 
 ## Available Endpoints
 
+### GET /estimate_get/
+
+Get an estimate on pricing for purchasing hashrate.
+
+#### Parameters
+
+    duration: (int) Duration (in minutes) to take the offer for
+
+    hashrate: (int) hashrate to purchase
+
+    hashrate_units: (char) units that hashrate is specified in (K, M, G, T, P for kilo, mega, giga, tera, and peta)
+
+    mining_algo: (string) mining algorithm (sha256d, scrypt, ethash, handshake, or equihash-zcash)
+
+    location: (string) location of miners to purchase from (NA West, NA East, EU West)
+
+    limit_price [optional]: (decimal string) optional limit price specification
+
+#### Returns
+
+    matched_hashrate: (decimal string) matched hashrate
+
+    matched_hashrate_units: units of hashrate for matched_hashrate
+
+    total_payment_amount: (decimal_string) total payment amount in BTC
+
+    average_price: (decimal string) average rate that you'd pay for, expressed with price_hash_units and price_time_units from get_configs/
+
+
+#### Example
+
+    curl 'https://api.warihash.com/estimate_get/?hashrate=30&hashrate_units=T&location=NA West&duration=180&minig_algo=sha256d'
+
+
 ### GET /get_configs/
 
-Get various configurations for the warihash site
+Get various configurations for the WariHash site
 
 #### Returns
 
@@ -43,3 +77,6 @@ Get various configurations for the warihash site
 
                 hashrate_max: (int) maximum hashrate available for this market in hashrate_units, if no hashrate is available, will be None
 
+#### Example
+
+    curl 'https://api.warihash.com/get_configs/'
