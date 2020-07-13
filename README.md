@@ -33,7 +33,7 @@ Get an estimate on pricing for purchasing hashrate.
 
     total_payment_amount: (decimal_string) total payment amount in BTC
 
-    average_price: (decimal string) average rate that you'd pay for, expressed with price_hash_units and price_time_units from get_configs/
+    average_price: (decimal string) average rate that you'd pay for, expressed with price_hash_units and price_time_units from configs_get/ API call
 
 
 #### Example
@@ -41,7 +41,8 @@ Get an estimate on pricing for purchasing hashrate.
     curl 'https://api.warihash.com/estimate_get/?hashrate=30&hashrate_units=T&location=NA West&duration=180&minig_algo=sha256d'
 
 
-### GET /get_configs/
+
+### GET /configs_get/
 
 Get various configurations for the WariHash site
 
@@ -79,4 +80,4 @@ Get various configurations for the WariHash site
 
 #### Example
 
-    curl 'https://api.warihash.com/get_configs/'
+    curl 'https://api.warihash.com/configs_get/'
