@@ -1,5 +1,5 @@
 # WariHash Public API 
-This is a repository that documents WariHash's public API. The API allows anyone to interface with WarihHash.
+This is a repository that documents WariHash's public REST JSON API. The API allows anyone to interface with and read data from WarihHash. Our endpoint is located at https://api.warihash.com and methods can be accessed for example via https://api.warihash.com/method_name
 
 ## Authentication
 
